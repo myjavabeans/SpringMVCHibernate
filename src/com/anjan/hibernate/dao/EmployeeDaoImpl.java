@@ -47,10 +47,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public void deleteEmployee(EmployeeBean eb) {
+	public void deleteEmployee(int id) {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		session.delete(eb);
+		
+		EmployeeBean empBean = (EmployeeBean) session.get(EmployeeBean.class, new Integer(id));
+		
+		session.delete(empBean);
 		tx.commit();
 		session.close();
 	}

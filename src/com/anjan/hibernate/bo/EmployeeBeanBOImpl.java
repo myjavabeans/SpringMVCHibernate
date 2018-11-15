@@ -34,8 +34,8 @@ public class EmployeeBeanBOImpl implements EmployeeBeanBO{
 	}
 
 	@Override
-	public void deleteEmployee(EmployeeBean eb) {
-		employeeDao.deleteEmployee(eb);
+	public void deleteEmployee(int id) {
+		employeeDao.deleteEmployee(id);
 	}
 
 	@Override

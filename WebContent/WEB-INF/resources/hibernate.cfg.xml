@@ -14,6 +14,7 @@ http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.jdbc.use_get_generated_keys">true</prop><!-- Required for Sequence -->
 			</props>
 		</property>
 
